@@ -12,6 +12,6 @@ func main() {
 		log.Fatal(("Base sin conexion"))
 		return
 	}
-	handlers.MAnejadores
+	handlers.Manejadores()
 
 }
