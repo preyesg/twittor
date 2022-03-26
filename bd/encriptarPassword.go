@@ -1,8 +1,6 @@
 package bd
 
-import (
-	"github.com/golang/crypto/bcrypt"
-)
+import "golang.org/x/crypto/bcrypt"
 
 func EncriptarPassword(pass string) (string, error) {
 

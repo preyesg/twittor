@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"twittor/bd"
-	"twittor/handlers"
+	"github.com/preyesg/twittor.git/bd"
+	"github.com/preyesg/twittor.git/handlers"
 )
 
 func main() {
