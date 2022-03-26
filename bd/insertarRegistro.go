@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/preyesg/twittor/models"
+	"github.com/preyesg/twittor.git/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -17,7 +17,7 @@ func InsertoRegistro(u models.Usuario) (string, bool, error) {
 	col := db.Collection("usuarios")
 	u.Password, _ = EncriptarPassword(u.Password)
 
-	result, err = col.InsertOne(ctx, u)
+	result, err := col.InsertOne(ctx, u)
 	if err != nil {
 		return "", false, err
 	}

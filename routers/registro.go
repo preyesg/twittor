@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/preyesg/twittor/bd"
-	"github.com/preyesg/twittor/models"
+	"github.com/preyesg/twittor.git/bd"
+	"github.com/preyesg/twittor.git/models"
 )
 
 func Registro(w http.ResponseWriter, r *http.Request) {

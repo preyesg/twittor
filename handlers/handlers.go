@@ -7,15 +7,16 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/preyesg/twittor/middlew"
+	"github.com/preyesg/twittor.git/middlew"
+	"github.com/preyesg/twittor.git/routers"
 	"github.com/rs/cors"
 )
 
-func MAnejadores() {
+func Manejadores() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/registro", middlew.ChequeoBaseDatos(routers.Registro())).Methods("POST")
+	router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro())).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 

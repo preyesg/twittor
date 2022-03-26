@@ -3,7 +3,7 @@ package middlew
 import (
 	"net/http"
 
-	"github.com/preyesg/twittor/bd"
+	"github.com/preyesg/twittor.git/bd"
 )
 
 func ChequeoBD(next http.HandlerFunc) http.HandlerFunc {
