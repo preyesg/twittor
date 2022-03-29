@@ -9,7 +9,7 @@ import (
 )
 
 var MongoCN = ConectarBD()
-var clientOptions = options.Client().ApplyURI("")
+var clientOptions = options.Client().ApplyURI("mongodb://preyesg:preyesg@localhost:27017/twittor")
 
 func ConectarBD() *mongo.Client {
 
