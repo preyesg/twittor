@@ -18,9 +18,11 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 	}
 	if len(t.Email) == 0 {
 		http.Error(w, "Email de usuario es requerido", 400)
+		return
 	}
 	if len(t.Password) < 5 {
 		http.Error(w, "Contraseña de 6 caracteres", 400)
+		return
 	}
 
 	_, encontrado, _ := bd.ChequeoYaExisteUsuario(t.Email)
@@ -30,7 +32,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 	}
 	_, status, err := bd.InsertoRegistro(t)
 	if err != nil {
-		http.Error(w, "Error insertando registro"+err.Error(), 400)
+		http.Error(w, "Error insertando registro "+err.Error(), 400)
 		return
 	}
 	if status == false {
